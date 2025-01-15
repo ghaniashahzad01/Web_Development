@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Software Engineer Job Application</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        h1, h2 {
+            color: #4CAF50;
+        }
+
+        /* Form Container */
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea, button {
+            width: 100%;
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            border-color: #4CAF50;
+            outline: none;
+            box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #45a049;
+        }
+
+        button[type="reset"] {
+            background: #f44336;
+        }
+
+        button[type="reset"]:hover {
+            background: #d32f2f;
+        }
+
+        /* Progress and Meter */
+        progress, meter {
+            width: 100%;
+            height: 20px;
+            margin-top: 5px;
+        }
+
+        /* Section Spacing */
+        h2 {
+            margin-top: 20px;
+        }
+
+        .form-section {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Software Engineer Job Application Form</h1>
+
+    <form action="/submit" method="post">
+        <!-- Personal Information -->
+        <div class="form-section">
+            <h2>Personal Information</h2>
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" maxlength="50" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required>
+
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+        </div>
+
+        <!-- Position Details -->
+        <div class="form-section">
+            <h2>Position Details</h2>
+            <label for="jobTitle">Desired Job Title:</label>
+            <select id="jobTitle" name="jobTitle" required>
+                <option value="frontend">Frontend Developer</option>
+                <option value="backend">Backend Developer</option>
+                <option value="fullstack">Fullstack Developer</option>
+            </select>
+
+            <label for="experience">Experience Level:</label>
+            <select id="experience" name="experience" required>
+                <option value="junior">Junior</option>
+                <option value="mid">Mid-Level</option>
+                <option value="senior">Senior</option>
+            </select>
+        </div>
+
+        <!-- Skills and Expertise -->
+        <div class="form-section">
+            <h2>Skills and Expertise</h2>
+            <label for="skills">Known Programming Languages:</label>
+            <textarea id="skills" name="skills" maxlength="200" placeholder="E.g., Python, JavaScript, C++" required></textarea>
+
+            <label for="desiredLang">Desired Programming Languages:</label>
+            <input type="text" id="desiredLang" name="desiredLang" list="languages" placeholder="Select or type">
+            <datalist id="languages">
+                <option value="Python">
+                <option value="JavaScript">
+                <option value="C++">
+                <option value="Java">
+                <option value="Ruby">
+            </datalist>
+        </div>
+
+        <!-- Portfolio Links -->
+        <div class="form-section">
+            <h2>Portfolio Links</h2>
+            <label for="github">GitHub Profile:</label>
+            <input type="url" id="github" name="github" placeholder="https://github.com/yourusername" required>
+
+            <label for="linkedin">LinkedIn Profile:</label>
+            <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile" required>
+        </div>
+
+        <!-- Upload Resume -->
+        <div class="form-section">
+            <h2>Upload Resume</h2>
+            <label for="resume">Upload Your Resume:</label>
+            <input type="file" id="resume" name="resume" required>
+        </div>
+
+        <!-- Application Progress -->
+        <div class="form-section">
+            <h2>Application Progress</h2>
+            <label for="progress">Form Completion:</label>
+            <progress id="progress" value="70" max="100"></progress> 70% Complete
+        </div>
+
+        <!-- Self-Evaluation -->
+        <div class="form-section">
+            <h2>Self-Evaluation</h2>
+            <label for="confidence">Confidence in Your Skills (1-10):</label>
+            <meter id="confidence" min="1" max="10" value="8" low="4" high="7" optimum="9"></meter>
+        </div>
+
+        <!-- Additional Comments -->
+        <div class="form-section">
+            <h2>Additional Comments</h2>
+            <label for="comments">Any Additional Information:</label>
+            <textarea id="comments" name="comments" maxlength="500" placeholder="Add your comments here"></textarea>
+        </div>
+
+        <!-- Submit and Reset -->
+        <button type="submit">Submit Application</button>
+        <button type="reset">Reset Form</button>
+    </form>
+</body>
+</html>
