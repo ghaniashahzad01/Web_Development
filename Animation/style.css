@@ -26,6 +26,7 @@ body{
         transform: translate(200%,0);
     }
     50%{
+        border-radius: 50%;
         transform: translate(200%, 200%);
     }
 }
