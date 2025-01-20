@@ -9,3 +9,6 @@ console.log(mood);
 
 const greetings = "Morning";
 console.log(mood + greetings );
+
+let nam = "ghania";
+console.table([num, mood, greetings,nam])
