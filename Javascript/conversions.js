@@ -1,22 +1,26 @@
 "use strict";
 
-// let names = "Ghania"
+//Convert a string to a number
+let names = "Ghania"
 
-// console.log(typeof names);
+console.log(typeof names);
 
-// let nam = Number(names);
-// console.log(nam);
+let nam = Number(names);
+console.log(nam);
 
-// let age = "34"
+// Convert a string to a boolean
+let age = "34"
 
-// console.log(typeof age);
+console.log(typeof age);
 
-// let ages = Number(age);
+let ages = Number(age);
 
-// console.log(typeof ages);
+console.log(typeof ages);
+
+
+// Convert a boolean to a string
 
 let isLogged = false;
-
 console.log(typeof isLogged);
 
 let LoggedIn = String(isLogged);
