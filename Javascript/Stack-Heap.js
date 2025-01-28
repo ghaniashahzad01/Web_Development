@@ -15,3 +15,6 @@ let anotherNumber = number; // Copies the value of 'number'
 anotherNumber = 20; // Modifying 'anotherNumber' does not affect 'number'
 
 
+// Modifying heap data
+let anotherObj = obj; // Reference is copied, not the actual object
+anotherObj.name = "Jane"; // Changes the original object since they share the same reference
