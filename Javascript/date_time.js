@@ -13,6 +13,6 @@ const minutes = String(now.getMinutes()).padStart(2, '0');
 const seconds = String(now.getSeconds()).padStart(2, '0');
 const formattedTime = `${hours}:${minutes}:${seconds}`;
 
-// Display the formatted date and time
+
 console.log(`Current Date: ${formattedDate}`);
 console.log(`Current Time: ${formattedTime}`);
