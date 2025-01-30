@@ -8,4 +8,9 @@ let student = {
     }
   };
   
-  
+// Accessing object properties
+console.log(student.firstName);  // Output: Ghania
+console.log(student['age']);      // Output: 22
+
+// Calling the method
+console.log(student.greet());     // Output: Hello, my name is Ghania Shahzad.
