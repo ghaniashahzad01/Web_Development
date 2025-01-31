@@ -53,3 +53,23 @@ function divide(a, b) {
 }
 console.log(divide(5, 0));  // NaN: Dividing by zero returns NaN
 
+// Common Pitfalls
+
+// 1. NaN in Logical Operations
+let valueNaN = NaN;
+if (valueNaN) {
+    console.log("This won't be printed");
+} else {
+    console.log("NaN is falsy in logical operations");  // This will execute because NaN is falsy
+}
+
+// 2. Comparison with NaN
+let resultNaN = 0 / 0;
+if (resultNaN === NaN) {
+    console.log("This won't execute");
+}
+
+// Correct way to compare NaN
+if (Object.is(resultNaN, NaN)) {
+    console.log("NaN is correctly compared using Object.is()");  // This will execute
+}
