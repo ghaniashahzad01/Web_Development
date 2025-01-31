@@ -73,3 +73,10 @@ if (resultNaN === NaN) {
 if (Object.is(resultNaN, NaN)) {
     console.log("NaN is correctly compared using Object.is()");  // This will execute
 }
+
+// Conclusion
+
+// Key Pitfalls Recap
+// - NaN is not equal to itself, use Object.is() or Number.isNaN()
+// - NaN is falsy in conditional checks, so don't assume it behaves like other falsy values
+// - Always handle NaN explicitly to avoid unexpected bugs
