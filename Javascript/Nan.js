@@ -26,3 +26,30 @@ if (NaN) {
 } else {
     console.log("NaN is falsy");  // This will execute because NaN is falsy
 }
+
+// Best Practices
+
+// 1. Checking if a Value is NaN
+let value = NaN;
+console.log(Number.isNaN(value));  // true: Number.isNaN() correctly identifies NaN
+
+let invalidNumber = "hello";
+console.log(Number.isNaN(invalidNumber));  // false: "hello" is not NaN
+
+// 2. Handling NaN in Calculations
+let result = 0 / 0;
+if (Number.isNaN(result)) {
+    console.log("The result is NaN");  // This will execute
+} else {
+    console.log("The result is", result);
+}
+
+// 3. Returning NaN in Functions
+function divide(a, b) {
+    if (b === 0) {
+        return NaN;  // Explicitly return NaN when division by zero
+    }
+    return a / b;
+}
+console.log(divide(5, 0));  // NaN: Dividing by zero returns NaN
+
