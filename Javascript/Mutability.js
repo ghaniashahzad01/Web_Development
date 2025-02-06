@@ -19,3 +19,20 @@ console.log(car); // { brand: "Toyota", model: "Camry" }
 
 // car = { brand: "Honda", model: "Civic" }; // Not allowed, reassigning a new object
 
+// Function to compare objects by content
+function isEqual(objA, objB) {
+    if (objA === objB) return true;
+    if (typeof objA !== "object" || typeof objB !== "object" || objA === null || objB === null) return false;
+    
+    let keysA = Object.keys(objA);
+    let keysB = Object.keys(objB);
+    if (keysA.length !== keysB.length) return false;
+    
+    for (let key of keysA) {
+        if (!keysB.includes(key) || !isEqual(objA[key], objB[key])) return false;
+    }
+    return true;
+}
+
+console.log(isEqual(person1, person3)); // false (since person1 was modified)
+
