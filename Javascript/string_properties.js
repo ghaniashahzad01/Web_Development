@@ -15,3 +15,16 @@ console.log(" okay \n ".trim()); // → okay
 // Padding numbers using padStart()
 console.log(String(6).padStart(3, "0")); // → 006
 
+// Splitting and joining strings
+let sentence = "Secretarybirds specialize in stomping";
+let words = sentence.split(" ");
+console.log(words); // → ["Secretarybirds", "specialize", "in", "stomping"]
+console.log(words.join(". ")); // → Secretarybirds. specialize. in. stomping
+
+// Repeating strings
+console.log("LA".repeat(3)); // → LALALA
+
+// Accessing string length and individual characters
+let string = "abc";
+console.log(string.length); // → 3
+console.log(string[1]); // → b
