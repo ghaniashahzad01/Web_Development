@@ -11,3 +11,4 @@ let obj = {
 console.log(obj[mySym]);
 console.log(obj["name"]);
 
+console.log(obj);
