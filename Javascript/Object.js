@@ -8,4 +8,4 @@ let obj = {
 }
 
 
-console.log(obj);
+console.log(obj[mySym]);
