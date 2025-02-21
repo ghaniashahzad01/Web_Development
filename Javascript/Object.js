@@ -8,8 +8,11 @@ let obj = {
 }
 
 
-// console.log(obj[mySym]);
-// console.log(obj["name"]);
+console.log(obj[mySym]);
+console.log(obj["name"]);
 
-// console.log(obj);
+console.log(obj);
 
+const {name: n , age: a  , l ="Not provided"} = obj;
+
+console.log(n, a ,l)
