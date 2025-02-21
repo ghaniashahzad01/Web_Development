@@ -1,23 +1,11 @@
-let journal = [
-    { events: ["work", "touched tree", "pizza"], squirrel: false },
-    { events: ["work", "ice cream", "cauliflower"], squirrel: false },
-    { events: ["weekend", "cycling", "peanuts"], squirrel: true }
-  ];
-  
-// Accessing and modifying journal entries
-console.log(journal[0].squirrel);  // false
-journal[0].wolf = false;           // Adding a new property
-delete journal[0].wolf;            // Removing a property
+let mySym = Symbol("id");
 
-// Checking properties
-console.log("squirrel" in journal[0]);  // true
+let obj = {
+  name : "ghania",
+  age: 20,
+  email: "user@gmail.com",
+  [mySym] : "100"
+}
 
-// Copying properties with Object.assign()
-Object.assign(journal[1], { mood: "happy" });
-console.log(journal[1]);
 
-// Adding a new entry
-journal.push({ events: ["work", "dinner"], squirrel: true });
-
-console.log(journal);
-  
+console.log(obj);
