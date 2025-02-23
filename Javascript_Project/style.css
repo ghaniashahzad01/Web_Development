@@ -17,7 +17,7 @@ body {
 
 h1, h2 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    /* text-align: center; */
+    text-align: center;
 }
 
 #grey, #yellow, #pink, #blue {
