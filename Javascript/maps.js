@@ -1,10 +1,7 @@
-let mymap = new Map(
-    [
+let mymap = new Map();
 
-       ['name' , 'ghania'],
-       [ 'age', 20] ,
-        ['email', 'user@gmail.com']
-    ]
-);
+mymap.set("name","ghania");
+mymap.set("age", "20");
+mymap.set("email","user@gmail.com");
 
-console.log(mymap);
+
