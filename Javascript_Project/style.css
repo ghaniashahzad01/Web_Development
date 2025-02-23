@@ -1,36 +1,43 @@
-.box{
-    margin: 2px;
-}
-
-body{
+body {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Overall layout in a column */
+    align-items: center; /* Center everything horizontally */
+    justify-content: center; /* Center everything vertically */
+    height: 100vh; /* Full viewport height for vertical centering */
+    margin: 0; /* Remove default body margin */
 }
 
-#grey{
+.box {
+    display: flex;
+    flex-direction: row; /* Boxes in a horizontal row */
+    justify-content: center; /* Center boxes horizontally */
+    align-items: center; /* Center boxes vertically */
+    gap: 10px; /* Space between boxes */
+}
+
+h1, h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* text-align: center; */
+}
+
+#grey, #yellow, #pink, #blue {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+#grey {
     background-color: grey;
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
 }
 
-#yellow{
+#yellow {
     background-color: yellow;
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
 }
 
-#pink{
-    background-color:palevioletred;
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
+#pink {
+    background-color: palevioletred;
 }
 
-#blue{
+#blue {
     background-color: rgb(42, 74, 133);
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
 }
