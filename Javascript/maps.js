@@ -11,3 +11,6 @@ console.log(mymap);
 
 mymap.forEach((value, key) => console.log(value, key));
 
+for (const keys of mymap.keys()) {
+    console.log(keys);
+} 
