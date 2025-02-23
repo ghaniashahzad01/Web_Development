@@ -14,3 +14,9 @@ mymap.forEach((value, key) => console.log(value, key));
 for (const keys of mymap.keys()) {
     console.log(keys);
 } 
+
+
+for (const [key,value] of mymap)  {
+    console.log('key: ${key}, value is: ${value}');
+    
+}
