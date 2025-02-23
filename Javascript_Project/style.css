@@ -1,0 +1,36 @@
+.box{
+    margin: 2px;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#grey{
+    background-color: grey;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+#yellow{
+    background-color: yellow;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+#pink{
+    background-color:palevioletred;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+
+#blue{
+    background-color: rgb(42, 74, 133);
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
