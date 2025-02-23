@@ -17,6 +17,6 @@ for (const keys of mymap.keys()) {
 
 
 for (const [key,value] of mymap)  {
-    console.log('key: ${key}, value is: ${value}');
+    console.log(`key:  ${key} , value is: ${value}`);
     
 }
