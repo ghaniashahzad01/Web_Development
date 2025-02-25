@@ -1,0 +1,21 @@
+body{
+    background-color: pink;
+}
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    height: 100vh;
+    font-size: 20px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    flex-direction: column;
+    color:black
+}
+#clock{
+   height: 60px;
+   width: 150px;
+   background-color: plum;
+   border-radius: 10px;
+}
