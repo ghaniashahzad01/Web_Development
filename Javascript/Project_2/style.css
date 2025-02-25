@@ -11,15 +11,15 @@ body{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     flex-direction: column;
-    color:#F1F0E9;
+    color: #F1F0E9;
 }
 #clock{
    height: 50px;
    width: 150px;
-   background-color: plum;
+   background-color: #E6B8D2; /* Softer pastel shade */
    border-radius: 10px;
    margin-top: 10px;
    padding: 10px;
-   color: #AA336A;
-   border: 1px solid #a80880; ;
+   color: #6B0036; /* Darker text for better readability */
+   border: 1px solid #940062; /* Slightly softer border */
 }
