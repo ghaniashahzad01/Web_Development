@@ -1,5 +1,5 @@
 body{
-    background-color: pink;
+    background-color: #AC1754;
 }
 #container{
     display: flex;
@@ -11,7 +11,7 @@ body{
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     flex-direction: column;
-    color:#AA336A;
+    color:#F1F0E9;
 }
 #clock{
    height: 50px;
@@ -21,4 +21,5 @@ body{
    margin-top: 10px;
    padding: 10px;
    color: #AA336A;
+   border: 1px solid #a80880; ;
 }
