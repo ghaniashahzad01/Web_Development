@@ -3,47 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guess the number</title>
+    <title>Guess the Number</title>
     <style>
-        body{
-            background-color:aquamarine;
+        body {
+            background-color: aquamarine;
         }
-        div{
+        div {
             display: flex;
             justify-content: center;
         }
-        input[type="number"]{
+        input[type="number"] {
             width: 100px;
             padding: 10px;
         }
-        h1{
+        h1 {
             text-align: center;
-            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
         }
-         #button{
-            background-color:white;
+        #button {
+            background-color: white;
             font-family: 'Times New Roman', Times, serif;
-         }
-         #button:hover{
-             background-color: lightblue;
-         }
-
+        }
+        #button:hover {
+            background-color: lightblue;
+        }
     </style>
 </head>
 <body>
-    <h1>Guess the Number(1-10)</h1>
+    <h1>Guess the Number (1-10)</h1>
     
     <div>
-
-    <input id="num" type="number" placeholder="Enter number here...">
-    <button id="button">Submit</button>
-
+        <input id="num" type="number" placeholder="Enter number here..." min="1" max="10">
+        <button onclick="Guess()">Submit</button>
+        <p id="result"></p>
     </div>
+
+    <script>
+        let random = Math.floor(Math.random() * 10) + 1; 
+
+        const userGuess = document.getElementById("num").value;
+        const resultText = document.getElementById("result");
+
+        function Guess() {
+            if (random === userGuess) {
+                resultText.innerHTML = "Congratulations! You have successfully guessed";
+                resultText.style.color = "green";
+            } else {
+                resultText.innerHTML = "Sorry, Try again";
+                resultText.style.color = "red";
+            }
+        }
+
+    </script>
 </body>
-<script>
-   
-   
-
-
-</script>
 </html>
+        
