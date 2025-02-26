@@ -6,55 +6,68 @@
     <title>Guess the Number</title>
     <style>
         body {
-            background-color: aquamarine;
-        }
-        div {
-            display: flex;
-            justify-content: center;
-        }
-        input[type="number"] {
-            width: 100px;
-            padding: 10px;
+            background-color: #e3f2fd;
+            font-family: Arial, sans-serif;
+            text-align: center;
         }
         h1 {
+            color: #333;
+        }
+        input {
+            padding: 8px;
+            font-size: 16px;
+            width: 120px;
             text-align: center;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border: 1px solid #ccc;
+            border-radius: 5px;
         }
-        #button {
-            background-color: white;
-            font-family: 'Times New Roman', Times, serif;
+        button {
+            padding: 8px 15px;
+            font-size: 16px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
-        #button:hover {
-            background-color: lightblue;
+        button:hover {
+            background: #0056b3;
+        }
+        p {
+            font-size: 18px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
+
     <h1>Guess the Number (1-10)</h1>
-    
-    <div>
-        <input id="num" type="number" placeholder="Enter number here..." min="1" max="10">
-        <button onclick="Guess()">Submit</button>
-        <p id="result"></p>
-    </div>
+    <input id="num" type="number" placeholder="Enter number..." min="1" max="10">
+    <button onclick="checkGuess()">Submit</button>
+    <p id="result"></p>
 
     <script>
-        let random = Math.floor(Math.random() * 10) + 1; 
+        let randomNumber = Math.floor(Math.random() * 10) + 1;
 
-        const userGuess = document.getElementById("num").value;
-        const resultText = document.getElementById("result");
+        function checkGuess() {
+            let userGuess = parseInt(document.getElementById("num").value);
+            let resultText = document.getElementById("result");
 
-        function Guess() {
-            if (random === userGuess) {
-                resultText.innerHTML = "Congratulations! You have successfully guessed";
+            if (isNaN(userGuess) || userGuess < 1 || userGuess > 10) {
+                resultText.innerHTML = "⚠️ Enter a number between 1 and 10!";
+                resultText.style.color = "orange";
+                return;
+            }
+
+            if (userGuess === randomNumber) {
+                resultText.innerHTML = "🎉 Correct! Well done!";
                 resultText.style.color = "green";
             } else {
-                resultText.innerHTML = "Sorry, Try again";
+                resultText.innerHTML = "❌ Wrong! Try again!";
                 resultText.style.color = "red";
             }
         }
-
     </script>
+
 </body>
 </html>
-        
