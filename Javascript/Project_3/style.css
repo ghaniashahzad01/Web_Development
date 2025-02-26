@@ -50,32 +50,3 @@ ul {
     list-style-type: none;
     padding: 0;
 }
-
-li {
-    background: #fff;
-    margin: 5px 0;
-    padding: 8px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #ddd;
-}
-
-.completed {
-    text-decoration: line-through;
-    color: gray;
-}
-
-button.delete {
-    background: red;
-    color: white;
-    border: none;
-    padding: 3px 6px;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button.delete:hover {
-    background: darkred;
-}
