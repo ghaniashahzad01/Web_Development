@@ -5,6 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title> 
    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #282c34;
+            color: white;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            margin-bottom: 10px;
+        }
+        .choices {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .choice {
+            width: 100px;
+            height: 100px;
+            font-size: 2rem;
+            background: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 50%;
+            transition: transform 0.2s;
+        }
+        .choice:hover {
+            transform: scale(1.1);
+        }
+        .result {
+            font-size: 1.5rem;
+            margin-top: 20px;
+        }
+        .scoreboard {
+            margin-top: 15px;
+            font-size: 1.2rem;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -18,6 +59,7 @@
     <p class="result" id="resultText">Choose an option to start!</p>
     <p class="scoreboard">Player: <span id="playerScore">0</span> | Computer: <span id="computerScore">0</span></p>
 
+    
     
 
 </body>
