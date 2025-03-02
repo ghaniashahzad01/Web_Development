@@ -5,48 +5,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Strength Checker</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
     
+        }
+    
+        .container {
+            background: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+    
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+    
+        input {
+            width: 80%;
+            padding: 12px;
+            margin-top: 10px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+            text-align: center;
+        }
+    
+        #strength {
+            margin-top: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
 </head>
-<style>
-    body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        font-family: Arial, sans-serif;
-        background: linear-gradient(135deg, #ff9a9e, #fad0c4);
 
-    }
-
-    .container {
-        background: #fff;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        text-align: center;
-    }
-
-    h2 {
-        color: #333;
-        margin-bottom: 15px;
-    }
-
-    input {
-        width: 80%;
-        padding: 12px;
-        margin-top: 10px;
-        border: 2px solid #ccc;
-        border-radius: 6px;
-        font-size: 16px;
-        text-align: center;
-    }
-
-    #strength {
-        margin-top: 10px;
-        font-size: 18px;
-        font-weight: bold;
-    }
-</style>
 <body>
     <div class="container">
         <h2>Password Strength Checker</h2>
