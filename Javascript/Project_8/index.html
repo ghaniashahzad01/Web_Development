@@ -55,7 +55,71 @@
         <p>Time Left: <span id="timer">10</span> sec</p>
         <p id="result"></p>
     </div>
+    
+    <script>
+        const questions = [
+            { question: "What is the capital of France?", options: ["Berlin", "Madrid", "Paris", "Rome"], answer: "Paris" },
+            { question: "Which planet is known as the Red Planet?", options: ["Earth", "Mars", "Jupiter", "Venus"], answer: "Mars" },
+            { question: "What is 2 + 2?", options: ["3", "4", "5", "6"], answer: "4" }
+        ];
 
+        let currentQuestionIndex = 0;
+        let score = 0;
+        let timeLeft = 10;
+        let timer;
+
+        function loadQuestion() {
+            if (currentQuestionIndex >= questions.length) {
+                document.getElementById("quiz-container").innerHTML = `<h3>Quiz Completed!</h3><p>Your Score: ${score}/${questions.length}</p>`;
+                return;
+            }
+
+            const questionData = questions[currentQuestionIndex];
+            document.getElementById("question").textContent = questionData.question;
+            const optionsContainer = document.getElementById("options");
+            optionsContainer.innerHTML = "";
+
+            questionData.options.forEach(option => {
+                const button = document.createElement("button");
+                button.textContent = option;
+                button.classList.add("option");
+                button.onclick = () => checkAnswer(option);
+                optionsContainer.appendChild(button);
+            });
+            resetTimer();
+        }
+
+        function checkAnswer(selectedOption) {
+            clearInterval(timer);
+            if (selectedOption === questions[currentQuestionIndex].answer) {
+                score++;
+                document.getElementById("result").textContent = "Correct! ✅";
+                document.getElementById("result").style.color = "green";
+            } else {
+                document.getElementById("result").textContent = "Wrong! ❌";
+                document.getElementById("result").style.color = "red";
+            }
+            currentQuestionIndex++;
+            setTimeout(loadQuestion, 1000);
+        }
+
+        function resetTimer() {
+            clearInterval(timer);
+            timeLeft = 10;
+            document.getElementById("timer").textContent = timeLeft;
+            timer = setInterval(() => {
+                timeLeft--;
+                document.getElementById("timer").textContent = timeLeft;
+                if (timeLeft === 0) {
+                    clearInterval(timer);
+                    currentQuestionIndex++;
+                    loadQuestion();
+                }
+            }, 1000);
+        }
+
+        loadQuestion();
+    </script>
    
 </body>
 </html>
