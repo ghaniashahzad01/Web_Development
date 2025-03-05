@@ -62,5 +62,10 @@
         }
     });
 
+    document.getElementById("stop").addEventListener("click", function () {
+        clearInterval(intervalId);
+        intervalId = null;
+    });
+    
 </script>
 </html>
