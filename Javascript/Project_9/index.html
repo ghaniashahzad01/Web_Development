@@ -54,7 +54,13 @@
         }
         return color;
     }
+    document.getElementById("start").addEventListener("click", function () {
+        if (!intervalId) {
+            intervalId = setInterval(() => {
+                document.body.style.backgroundColor = getRandomColor();
+            }, 1000);
+        }
+    });
 
-    
 </script>
 </html>
