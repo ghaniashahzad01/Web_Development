@@ -42,5 +42,19 @@
     <button id="start">Start</button>
     <button id="stop">Stop</button>
 </body>
+<script>
+    let intervalId;
 
+    function getRandomColor() {
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+
+        for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+
+    
+</script>
 </html>
