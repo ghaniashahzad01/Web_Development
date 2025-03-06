@@ -23,7 +23,28 @@
     <h2>✍️ Auto Text Typer</h2>
     <p id="text"></p>
 
-    
+    <script>
+        const message = "Hello, welcome to the Auto Text Typer!";
+        let index = 0;
+
+        function typeText() {
+            if (index < message.length) {
+                document.getElementById("text").textContent += message[index];
+                index++;
+                setTimeout(typeText, 100); // Typing speed (100ms per letter)
+            } else {
+                setTimeout(resetText, 1000); // Restart after a delay
+            }
+        }
+
+        function resetText() {
+            document.getElementById("text").textContent = "";
+            index = 0;
+            setTimeout(typeText, 500); // Restart typing after a short delay
+        }
+
+        typeText(); // Start typing when the page loads
+    </script>
 
 </body>
 </html>
