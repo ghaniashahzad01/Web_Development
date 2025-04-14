@@ -1,60 +1,59 @@
 body {
-    margin: 0;
-    padding: 0;
-    background: #f4f4f4;
-    font-family: Arial, sans-serif;
-    display: flex;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .calculator {
-    background: #fff;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    width: 300px;
-  }
-  
-  #display {
-    width: 100%;
-    padding: 15px;
-    font-size: 1.5rem;
-    text-align: right;
-    margin-bottom: 15px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    box-sizing: border-box;
-  }
-  
-  .buttons {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-  }
-  
-  button {
-    padding: 20px;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 10px;
-    background-color: #eee;
-    transition: background-color 0.2s;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #ddd;
-  }
-  
-  .equal {
-    grid-column: span 2;
-    background-color: #4CAF50;
-    color: white;
-  }
-  
-  .equal:hover {
-    background-color: #45a049;
-  }
-  
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  font-family: Arial, sans-serif;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  background: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+#display {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.5rem;
+  text-align: right;
+  margin-bottom: 15px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #eee;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+.equal {
+  grid-column: span 2;
+  background-color: #4CAF50;
+  color: white;
+}
+
+.equal:hover {
+  background-color: #45a049;
+}
